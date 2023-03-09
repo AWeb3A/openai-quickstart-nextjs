@@ -48,15 +48,24 @@ export default async function (req, res) {
   }
 }
 
-function generatePrompt(animal) {
-  const capitalizedAnimal =
-    animal[0].toUpperCase() + animal.slice(1).toLowerCase();
-  return `Suggest three names for an animal that is a superhero.
+function generatePrompt(car) {
+  const capitalizedCar =
+  car[0].toUpperCase() + car.slice(1).toLowerCase();
+  return `Dame toda la informacion que tengas sobre el siguiente modelos de Autos:
 
-Animal: Cat
-Names: Captain Sharpclaw, Agent Fluffball, The Incredible Feline
-Animal: Dog
-Names: Ruff the Protector, Wonder Canine, Sir Barks-a-Lot
-Animal: ${capitalizedAnimal}
-Names:`;
+  Dame informacion breve, precisa, y correcta. Solamente quisiera el dato nada mas.
+
+Modelo: Toyota
+Informacion: Del 2017 al 2022 han entrado 323,756 carros en la republica dominicana -->
+
+Modelo: Honda
+Informacion: Del 2017 al 2022 han entrado 172,733 carros en la republica dominicana -->
+
+Modelo: Mazda
+Informacion: Del 2017 al 2022 han entrado 32,949 carros en la republica dominicana -->
+
+Modelo: ${capitalizedCar}
+Informacion: 
+
+`;
 }
